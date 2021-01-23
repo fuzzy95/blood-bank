@@ -15,6 +15,9 @@ import SignUpComplete from './pages/Auth/SignUpComplete';
 import DonorRegistration from './pages/DonorRegistration';
 import Home from './pages/Home';
 import ForgotPassword from './pages/Auth/ForgotPassword';
+import AdminLogin from './pages/Admin/AdminLogin';
+import AdminDashboard from './pages/Admin/AdminDashBoard';
+import RequesterRegistration from './pages/RequesterRegistration';
 
 const App = () => {
   let dispatch = useDispatch();
@@ -34,6 +37,7 @@ const App = () => {
     });
 
     return () => unsubscribe();
+    // eslint-disable-next-line
   }, []);
 
   return (
@@ -47,8 +51,11 @@ const App = () => {
         <Route path='/signup/complete' exact component={SignUpComplete} />
         <Route path='/forgot/password' exact component={ForgotPassword} />
         <Route path='/blooddonorreg' exact component={DonorRegistration} />
+        <Route path='/bloodtakerreg' exact component={RequesterRegistration} />
+        <Route path='/adminlogin' exact component={AdminLogin} />
+        <Route path='/admindashboard' exact component={AdminDashboard} />
       </Switch>
-      <Footer className='mt-auto' />
+      <Footer />
     </Router>
   );
 };

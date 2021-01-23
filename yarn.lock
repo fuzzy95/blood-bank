@@ -1683,6 +1683,21 @@
   resolved "https://registry.yarnpkg.com/@iconify-icons/ant-design/-/ant-design-1.1.0.tgz#7fbaa994dcac24195512164595118819e5749bca"
   integrity sha512-RU3MljXpV3Y777woJb8t1ymJ+4k7QqGDOYsSJxkDHNRkJruPl0CtC/QpXgPYA+beAmhTTfz2HPZSJXYnZUlAmg==
 
+"@iconify-icons/carbon@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@iconify-icons/carbon/-/carbon-1.1.1.tgz#226cdb2abb87bb0e3a50e920a6360a014c1e352c"
+  integrity sha512-agSidvd7mwv0ZzWd5yXDeutCj/z1arczaMWIgyvZzMwEBSbzOziCPymqal6sSBPNIAJWHy/8WczDv5/nl/t0Mw==
+
+"@iconify-icons/clarity@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@iconify-icons/clarity/-/clarity-1.1.0.tgz#d6b7f5ad2d19b1da00075c24143562e40c2c62c0"
+  integrity sha512-/Xhva35u6lE/hwel97H+jdCJBrcZZhQ4HXOY7JtzOsf5kQc/x6+bcmm6DU43iucV8yBsJPOcalIrALZdeHRSwA==
+
+"@iconify-icons/eva@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@iconify-icons/eva/-/eva-1.1.0.tgz#4a3bc46625f7bffad0b298d48a587be360952c71"
+  integrity sha512-YVJSW8U09ypVAXuEyMRFdPOeY7p4MfofnLQVrZ2Ug5F7GA+fNHrWLwbL3Et4k+1fO2Uvim20dyG5v7V79Nc1vg==
+
 "@iconify-icons/subway@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@iconify-icons/subway/-/subway-1.1.0.tgz#9553251c5b2b36b483cc591f6ef76a56f70fc19e"
@@ -9212,7 +9227,7 @@ pnp-webpack-plugin@1.6.4:
   dependencies:
     ts-pnp "^1.1.6"
 
-popper.js@^1.14.4:
+popper.js@^1.14.4, popper.js@^1.16.1:
   version "1.16.1"
   resolved "https://registry.yarnpkg.com/popper.js/-/popper.js-1.16.1.tgz#2a223cb3dc7b6213d740e40372be40de43e65b1b"
   integrity sha512-Wb4p1J4zyFTbM+u6WuO4XstYx4Ky9Cewe4DWrel7B0w6VVICvPwdOpotjzcf6eD8TsckVnIMNONQyPIUFOUbCQ==
