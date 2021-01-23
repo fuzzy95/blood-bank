@@ -21,7 +21,7 @@ const Header = () => {
               it most
             </p>
             <div>
-              <Link>
+              <Link to='/blooddonorreg'>
                 <button className='inline-flex font-maven font-medium items-center nm-convex-ash hover:bg-blood text-blood hover:text-black border-0 py-3 px-8 focus:outline-none rounded text-base mt-3'>
                   Become a Donor
                 </button>

@@ -7,7 +7,7 @@ const NumberSection = () => {
         <div className='container px-5 py-24 mx-auto'>
           <div className='flex justify-evenly flex-wrap -m-4 text-center'>
             <div className='p-4 md:w-1/4 sm:w-1/2 w-full'>
-              <div className='border-0 px-4 py-6 rounded-lg nm-flat-gray-200-sm'>
+              <div className='border-0 px-4 py-6 rounded-lg nm-flat-gray-200'>
                 <svg
                   fill='none'
                   stroke='currentColor'
@@ -27,7 +27,7 @@ const NumberSection = () => {
               </div>
             </div>
             <div className='p-4 md:w-1/4 sm:w-1/2 w-full'>
-              <div className='border-0 px-4 py-6 rounded-lg nm-flat-gray-200-sm'>
+              <div className='border-0 px-4 py-6 rounded-lg nm-flat-gray-200'>
                 <svg
                   fill='none'
                   stroke='currentColor'
@@ -48,7 +48,7 @@ const NumberSection = () => {
               </div>
             </div>
             <div className='p-4 md:w-1/4 sm:w-1/2 w-full'>
-              <div className='border-0 px-4 py-6 rounded-lg nm-flat-gray-200-sm'>
+              <div className='border-0 px-4 py-6 rounded-lg nm-flat-gray-200'>
                 <svg
                   fill='none'
                   stroke='currentColor'
