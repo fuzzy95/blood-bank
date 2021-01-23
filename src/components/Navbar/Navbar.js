@@ -1,9 +1,23 @@
 import userAddOutlined from '@iconify-icons/ant-design/user-add-outlined';
 import userOutlined from '@iconify-icons/ant-design/user-outlined';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import PrimaryButton from '../Buttons/PrimaryButton';
+import { useDispatch } from 'react-redux';
+import firebase from '../../firebase';
 
 const Navbar = () => {
+  let dispatch = useDispatch();
+  let history = useHistory();
+
+  const logout = () => {
+    firebase.auth().signOut();
+    dispatch({
+      type: 'LOGOUT',
+      payload: null,
+    });
+    history.push('/signin');
+  };
+
   return (
     <>
       <header className='text-gray-600 body-font'>
@@ -26,6 +40,7 @@ const Navbar = () => {
           <div className='flex justify-between items-center space-x-4'>
             <PrimaryButton to='/signin' text='Sign In' icon={userOutlined} />
             <PrimaryButton to='/signup' text='Sign Up' icon={userAddOutlined} />
+            <PrimaryButton text='Logout' icon={userAddOutlined} />
           </div>
         </div>
       </header>

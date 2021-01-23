@@ -8,7 +8,7 @@ const SignUp = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     const config = {
-      url: 'http://localhost:3000/signup/complete',
+      url: process.env.REACT_APP_REGISTER_REDIRECT_URL,
       handleCodeInApp: true,
     };
 
@@ -50,7 +50,7 @@ const SignUp = () => {
 
   return (
     <>
-      <section className='text-gray-600 body-font font-rajdhani h-screen mt-20 -mb-60'>
+      <section className='text-gray-600 body-font font-rajdhani lg:h-screen h-auto lg:mt-20 mt-auto lg:-mb-60 mb-0'>
         <div className='container px-5 py-24 mx-auto'>
           <div className='w-full flex flex-wrap justify-center items-center'>
             <div className='xl:w-1/3 lg:w-2/4 md:w-1/2 w-full nm-flat-ash rounded-lg p-8 flex flex-col mt-10 md:mt-0'>

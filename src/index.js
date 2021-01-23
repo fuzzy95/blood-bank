@@ -4,10 +4,19 @@ import './style/main.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// redux
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import rootReducer from './reducers';
+
+// store
+const store = createStore(rootReducer, composeWithDevTools());
+
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <App />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root')
 );
 
