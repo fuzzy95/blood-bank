@@ -14,6 +14,7 @@ import SignUp from './pages/Auth/SignUp';
 import SignUpComplete from './pages/Auth/SignUpComplete';
 import DonorRegistration from './pages/DonorRegistration';
 import Home from './pages/Home';
+import ForgotPassword from './pages/Auth/ForgotPassword';
 
 const App = () => {
   let dispatch = useDispatch();
@@ -44,6 +45,7 @@ const App = () => {
         <Route path='/signin' exact component={SignIn} />
         <Route path='/signup' exact component={SignUp} />
         <Route path='/signup/complete' exact component={SignUpComplete} />
+        <Route path='/forgot/password' exact component={ForgotPassword} />
         <Route path='/blooddonorreg' exact component={DonorRegistration} />
       </Switch>
       <Footer className='mt-auto' />

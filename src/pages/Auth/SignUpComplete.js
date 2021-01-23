@@ -1,10 +1,18 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { auth } from '../../firebase';
 import { toast } from 'react-toastify';
+import { useSelector } from 'react-redux';
 
 const SignUpComplete = ({ history }) => {
   const [email, setEmail] = useState('');
-  const [password, setPassaword] = useState('');
+  const [password, setPassword] = useState('');
+
+  const { user } = useSelector((state) => ({ ...state }));
+
+  useEffect(() => {
+    if (user && user.token) history.push('/');
+    // eslint-disable-next-line
+  }, [user]);
 
   useEffect(() => {
     setEmail(window.localStorage.getItem('emailForRegistration'));
@@ -34,8 +42,8 @@ const SignUpComplete = ({ history }) => {
         await user.updatePassword(password);
         const idTokenResult = await user.getIdTokenResult();
         //redux store
-
-        // history.push('/blooddonorreg');
+        console.log(user, idTokenResult);
+        history.push('/blooddonorreg');
       }
     } catch (error) {
       console.log(error);
@@ -64,7 +72,7 @@ const SignUpComplete = ({ history }) => {
         id='password'
         name='password'
         value={password}
-        onChange={(e) => setPassaword(e.target.value)}
+        onChange={(e) => setPassword(e.target.value)}
         placeholder='Enter your password'
         className='w-full bg-ash nm-inset-ash rounded focus:border-red-100 focus:ring-1 focus:ring-blood text-base outline-none text-gray-700 py-2 px-3 leading-8 transition-colors duration-200 ease-in-out'
       />
